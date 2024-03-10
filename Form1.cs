@@ -51,7 +51,7 @@ namespace WinFormAppRandomNumberGuessing
             {
                 lbl_durum.Visible = true;
                 lbl_durum.Text = "Sayı Giriniz!!";
-                sayac--;
+                
             }
             else
             {
