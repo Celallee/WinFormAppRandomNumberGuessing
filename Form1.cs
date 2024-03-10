@@ -19,7 +19,8 @@ namespace WinFormAppRandomNumberGuessing
         int rastgele, sayac;
         private void btn_start_Click(object sender, EventArgs e)
         {
-
+           
+           
             // MessageBox.Show("Start");	
             lbl_durum.Visible = true;
             txt_sayi.Text = "";
@@ -27,15 +28,16 @@ namespace WinFormAppRandomNumberGuessing
             Random random = new Random();
             rastgele = random.Next(0, 100);
             sayac = 10;
-            lbl_sayac.Text = sayac.ToString() + " Hakkınız var";
+           
             lbl_durum.Text = rastgele.ToString();
             lbl_durum.Text = "";
-            lbl_sayac.Text = "";
+            lbl_sayac.Text = sayac.ToString() + " Hakkınız var";
 
         }
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            lbl_durum.BackColor = Color.Orange;
             lbl_durum.Visible = false;
             btn_control.Enabled = false;
             lbl_sayac.Text = "10 Hakkınız var";
@@ -48,7 +50,7 @@ namespace WinFormAppRandomNumberGuessing
             if (txt_sayi.Text == "")
             {
                 lbl_durum.Visible = true;
-                lbl_durum.Text = "Sayi giriniz";
+                lbl_durum.Text = "Sayı Giriniz!!";
                 sayac--;
             }
             else
@@ -68,12 +70,14 @@ namespace WinFormAppRandomNumberGuessing
                 }
                 else
                 {
+                    lbl_durum.BackColor = Color.Green;
                     lbl_durum.Text = "Kazandınız";
                     btn_control.Enabled = false;
                 }
             }
             if (sayac == 0)
             {
+                lbl_durum.BackColor = Color.Red;
                 lbl_durum.Text = "Kazanamadın";
                 btn_control.Enabled = false;
 

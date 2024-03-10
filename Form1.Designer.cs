@@ -94,7 +94,7 @@
             this.txt_sayi.Name = "txt_sayi";
             this.txt_sayi.Size = new System.Drawing.Size(202, 20);
             this.txt_sayi.TabIndex = 5;
-            this.txt_sayi.Text = "sayı giriniz";
+            this.txt_sayi.Text = "Sayı Giriniz!!";
             // 
             // Form1
             // 
